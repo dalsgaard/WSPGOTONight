@@ -24,3 +24,5 @@ kim@kimdalsgaard.com
 [Shadow DOM 201](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/)
 
 [HTML Imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/)
+
+[Custom Elements](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
