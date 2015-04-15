@@ -1,0 +1,10 @@
+{
+  "name": "WSPGOTONight",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dalsgaard/WSPGOTONight",
+  "authors": [
+    "Kim Dalsgaard <kim@kimdalsgaard.com>"
+  ],
+  "license": "MIT",
+  "private": true
+}

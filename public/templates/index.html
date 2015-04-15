@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Templates</title>
+</head>
+<body>
+  <template>
+    <script>
+      console.log('Foo!');
+    </script>
+    <img src="../images/logo.svg" alt="logo"/>
+    <h1>Foo</h1>
+  </template>
+  <script>
+    var template = document.querySelector('template');
+    //var clone = template.content.cloneNode(true);
+    //document.body.appendChild(clone);
+    var clone = document.importNode(template.content, true);
+    clone.querySelector('h1').innerText = 'Bar!';
+    document.body.appendChild(clone);
+  </script>
+</body>
+</html>

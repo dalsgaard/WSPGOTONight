@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>HTML Imports</title>
+  <link rel="import" href="tag.html"/>
+  <link rel="import" href="script.html"/>
+  <link rel="import" href="style.html"/>
+</head>
+`<body>
+  <h1>Foo!!!</h1>
+  <script>
+    var link = document.querySelector('link[href="tag.html"]');
+    var p = link.import.querySelector('p');
+    document.body.appendChild(p);
+  </script>
+</body>
+</html>

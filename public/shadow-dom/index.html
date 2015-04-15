@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Shadow DOM</title>
+  <style>
+    h1 {
+      color: red;
+    }
+    body /deep/ h1 {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bar!</h1>
+  <div id="host" class="baz">
+    <span class="foo">Foo!</span>
+    <p>Bar/Baz</p>
+  </div>
+  <template>
+    <style>
+      :host(:hover) {
+        background-color: aquamarine;
+      }
+      h1 {
+        color: green;
+      }
+      ::content p {
+        color: blue;
+      }
+    </style>
+    <h1><content select=".foo"></content></h1>
+    <h2><content></content></h2>
+  </template>
+  <script>
+    var host = document.querySelector('#host');
+    var root = host.createShadowRoot();
+    var template = document.querySelector('template');
+    var clone = template.content.cloneNode(true);
+    root.appendChild(clone);
+  </script>
+</body>
+</html>
